@@ -1,0 +1,23 @@
+צרו פרויקט חדש המאפשר דרך מודל השכבות 
+(DAL, BLL, CONTROLLER וכדומה)
+ להוסיף לקוח חדש לטבלת הלקוחות של Northwind.
+  יש לשים לב שעבור לקוח חובה לספק קוד לקוח.
+ זה לא מספור אוטומטי רץ.
+
+אתגר: לאפשר גם עריכת לקוח.
+
+
+29 customers
+
+INSERT INTO customers 
+(id, company, last_name, first_name, email_address, job_title, business_phone, home_phone, mobile_phone, fax_number, address, city, state_province, zip_postal_code, country_region, web_page, notes, attachments) VALUES 
+('30', 'johnmogi.com', 'mogi', 'john', 'anguru@gmail.com', 'senior', '0509382456', '0509382456', '0509382456', '0509382456', 'ha-assis 7 - apt. 19', 'Pardes Hanna', 'na', '12434', 'na', 'https://www.johnmogi.com', 'best web designer in the world', NULL);
+
+
+INSERT INTO customers (id, first_name, last_name,email_address, mobile_phone) VALUES (31, 'Mr.', 'Miagi', 'mrmiagi@gmail.com', '0508282456')
+
+$sql = `INSERT INTO customers (id, first_name, last_name,email_address, mobile_phone) VALUES (31, 'Mr.', 'Miagi', 'mrmiagi@gmail.com', '0508282456')`;
+
+// function addCustomer($id, $company, $last_name, $first_name, $email_address, $job_title, $business_phone, 
+// $home_phone, $mobile_phone, $fax_number, $address, $city,  $zip_postal_code, $state_province, $country_region, $web_page, $notes, $attachments) {
+//  $sql = `INSERT INTO customers(id, company, last_name, first_name, email_address, job_title, business_phone, home_phone, mobile_phone, fax_number, address, city, state_province, zip_postal_code, country_region, web_page, notes, attachments) VALUES ($id, '$company', '$last_name', '$first_name', '$email_address', '$job_title', '$business_phone', '$home_phone', '$mobile_phone', '$fax_number', '$address', '$city', '$zip_postal_code', '$state_province', '$country_region', '$web_page', ' $notes', '$attachments')`;
