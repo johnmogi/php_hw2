@@ -1,6 +1,6 @@
 <?php
 function connect() {
-    $connection = mysqli_connect("localhost", "root", "q1w2e3", "northwind");
+    $connection = mysqli_connect("localhost", "root", "", "northwind");
     if(mysqli_connect_errno($connection)) {
         $msg = "Error: " . mysqli_connect_error();
         die($msg);

@@ -1,11 +1,18 @@
 
 <?php
 require_once './dal.php';
-function addClient($id, $first_name,$last_name, $email_address, $mobile_phone){ 
-$sql = "INSERT INTO customers (id, first_name, last_name,email_address, mobile_phone)" . 
-"VALUES ($id, '$first_name', '$last_name', '$email_address', '$mobile_phone')";
-// "VALUES('$name', $price, $stock)"; 
- $cID = insert($sql);
-    return $cID;
+function addClient($CustomerID, $ContactName, $CompanyName, $Phone){ 
+
+$sql = "INSERT INTO customers(CustomerID, ContactName, CompanyName, Phone)  " .
+        "VALUES ('$CustomerID', '$ContactName', '$CompanyName' , '$Phone')";
+
+$id = insert($sql);
+    return $id;
 }
 
+// function addProduct($name, $price, $stock) {
+//  $sql = "INSERT INTO Products(ProductName, UnitPrice, UnitsInStock) " .
+//           "VALUES('$name', $price, $stock)";
+//     $id = insert($sql);
+//     return $id;
+// }
