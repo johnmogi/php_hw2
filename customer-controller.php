@@ -14,7 +14,16 @@ switch($command) {
         $id = addClient($CustomerID, $ContactName, $CompanyName, $Phone);
         header("location: thanks.php");
         break;
-    
+       case "updateClient":
+        $CustomerID = $_POST["CustomerID"];
+        $ContactName = $_POST["ContactName"];
+        $CompanyName = $_POST["CompanyName"];
+        $Phone = $_POST["Phone"];
+        $id = updateClient($CustomerID, $ContactName, $CompanyName, $Phone);
+        header("location: thanks.php");
+        break;
+
+        
 }
 
 
