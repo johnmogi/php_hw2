@@ -8,6 +8,13 @@
 
 </head>
 <body>
+<?php
+session_start();
+if(isset($_SESSION["lastCommands"])){
+    $lastCommands= $_SESSION["lastCommands"];
+echo "last commands: " . $lastCommands;
+}
+?>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/VbyaNeJxPv8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </body>
 </html>
